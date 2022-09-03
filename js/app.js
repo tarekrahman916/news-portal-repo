@@ -1,8 +1,9 @@
 
 //load all categories
 const loadCategories = async () => {
-  const url = `https://openapi.programming-hero.com/api/news/categories`;
+  
   try {
+    const url = `https://openapi.programming-hero.com/api/news/categories`;
     const res = await fetch(url);
     const data = await res.json();
     displayCategories(data.data.news_category);
@@ -29,8 +30,8 @@ const loadNews = async (category_id, categoryName) => {
 
   toggleSpinner(true); //spinner starts
 
-  const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
   try {
+    const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     const res = await fetch(url);
     const data = await res.json();
     displayNews(data.data, categoryName);
