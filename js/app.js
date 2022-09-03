@@ -169,22 +169,20 @@ const displayNewsDetails = (news) => {
 
   const newDetailsContainer = document.getElementById("news-details-container");
   newDetailsContainer.innerHTML = `
-  <img
-  src="${news.image_url ? news.image_url : 'Image Not Found'}"
-  class="img-fluid rounded-start w-100"
-  alt="..."
-  />
-  <p>Author: ${news.author.name ? news.author.name : "Not Found"}</p>
-  <div>
-  <p>Total Views: ${news.total_view ? news.total_view+'M' :'No Data Available'}</p>
-  <div class="d-flex ">
-     <p class="me-4">Ratting:${news.rating ? news.rating.number: 'Data Not Found'}</p> 
-     <p>${news.rating ? news.rating.badge: 'Data Not Found'}</p>
-  </div>
-  </div>
-  <p class="card-text text-secondary">
-        ${news.details} 
-  </p>
+     <img
+     src="${news.image_url ? news.image_url : 'Image Not Found'}"
+     class="img-fluid rounded-start w-100 mb-3"
+     alt="..."
+     />
+     <p class="text-secondary">Author: ${news.author.name ? news.author.name : "Not Found"}</p>
+     <div class="text-secondary">
+     <p>Total Views: ${news.total_view ? news.total_view+'M' :'No Data Available'}</p>
+     <div class="d-flex ">
+        <p class="me-4">Ratting:${news.rating ? news.rating.number: 'Data Not Found'}</p> 
+        <p>${news.rating ? news.rating.badge: 'Data Not Found'}</p>
+     </div>
+     </div>
+     <p class="card-text"> ${news.details} </p>
   
   
   `;

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>World News ! Blogs</title>
+    <script
+      src="https://kit.fontawesome.com/b44c2fa3a4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <!--------------------
+         Navbar Starts 
+      ---------------------->
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand text-primary fs-2" href="index.html"
+            >World News</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ms-auto align-items-center">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >News</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+              </ul>
+              <i class="fa-solid fa-user-tie user"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--------------------
+         Navbar Ends 
+      ---------------------->
+      <hr class="border border-secondary opacity-75 mx-auto" />
+      <!-- Navbar Ends -->
+    </header>
+    <main class="container">
+      <!-- Blogs -->
+      <div>
+        <h3 class="mb-3">(1) Difference Between Var, Let And Const</h3>
+        <div class="ms-3">
+          <div>
+            <p>
+              <strong>Var:</strong> The var is the oldest keyword to declare a
+              variable in JavaScript. The scope is global when a var variable is
+              declared outside a function. This means that any variable that is
+              declared with var outside a function block is available for use in
+              the whole window.
+              <br />
+              var variables can be re-declared and updated.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>Let:</strong> let is now preferred for variable
+              declaration. A block is a chunk of code bounded by {}. A block
+              lives in curly braces. Anything within curly braces is a block. So
+              a variable declared in a block with let is only available for use
+              within that block.
+              <br />
+              let can be updated but not re-declared.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>Const:</strong> Variables declared with the const maintain
+              constant values. const declarations share some similarities with
+              let declarations. Like let declarations, const declarations can
+              only be accessed within the block they were declared
+              <br />
+              const cannot be updated or re-declared
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-5">
+        <h3 class="mb-3">
+          (2) Difference Between Arrow function and Regular function.
+        </h3>
+        <div class="ms-3">
+          <div>
+            <p>
+              <strong>Arrow Function:</strong> Arrow functions is a new feature
+              introduced in ES6 enable writing concise functions in JavaScript.
+              the arrow functions are only callable and not constructible, i.e arrow functions can never be used as constructor functions.
+            
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>Regular Function:</strong> Regular functions created using function declarations or expressions are constructible and callable. Since regular functions are constructible, they can be called using the new keyword.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div >
+        <h3 class="mb-3">
+          (3) Difference Between map(), forEach(), filter() and find().
+        </h3>
+        <div class="ms-3">
+          <div>
+            <p>
+              <strong>map()</strong> The map method receives a function as a
+              parameter. Then it applies it on each element and returns an
+              entirely new array populated with the results of calling the
+              provided function.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>forEach():</strong> Like map , the forEach() method
+              receives a function as an argument and executes it loop for each
+              array element.
+              it does not returns.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>filter():</strong> filter() method is used to filters all
+              the elements and returns the element that matches and the element
+              that do not match are removed.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>find():</strong> find() returns the first element of the
+              selected elements that match the selector..
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!----------------------- 
+      Footer 
+     ------------------------>
+    <footer class="footer text-center">
+      <h2>World News</h2>
+      <hr class="border border-secondary opacity-75 mx-auto" />
+      <p>Copyright 2022 World News</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
