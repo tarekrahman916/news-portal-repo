@@ -89,23 +89,23 @@ const displayNews = (allNews, categoryName) => {
           <p class="card-text text-secondary">
           ${
             news.details.length > 150
-              ? news.details.split(" ", 50) + "..."
+              ? news.details.slice(0,300) + "..."
               : news.details
           } 
           </p>
           <div class="row align-items-center">
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-6 mt-5">
               <div class="d-flex">
                 <img
-                  src="${news.author.img}"
-                  alt=""
+                  src="${news.author.img ?news.author.img :'Image Not Found'}"
+                  alt=""   
                   class="thumbnail"
                 />
                 <div class="ms-2">
                   <h6>${
                     news.author.name ? news.author.name : "No Data Available"
                   }</h6>
-                  <p class="text-muted">${news.author.published_date}</p>
+                  <p class="text-muted">${news.author.published_date ? news.author.published_date:'No data available'}</p>
                 </div>
               </div>
             </div>
@@ -175,16 +175,17 @@ const displayNewsDetails = (news) => {
   alt="..."
   />
   <p>Author: ${news.author.name ? news.author.name : "Not Found"}</p>
-  <p class="card-text text-secondary">
-        ${news.details.slice(0, 300)} 
-  </p>
   <div>
   <p>Total Views: ${news.total_view ? news.total_view+'M' :'No Data Available'}</p>
   <div class="d-flex ">
-     <p class="me-4">Ratting:${news.rating ? news.rating.number: 'Data Not Found'}</p>
+     <p class="me-4">Ratting:${news.rating ? news.rating.number: 'Data Not Found'}</p> 
      <p>${news.rating ? news.rating.badge: 'Data Not Found'}</p>
   </div>
   </div>
+  <p class="card-text text-secondary">
+        ${news.details} 
+  </p>
+  
   
   `;
 };
