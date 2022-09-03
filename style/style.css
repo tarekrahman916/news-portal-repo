@@ -1,1 +1,30 @@
+body {
+  background-color: #f6f6f6;
+}
 
+.user {
+  font-size: 24px;
+}
+
+hr {
+  width: 90%;
+}
+
+a {
+  color: #858585;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.footer {
+  background-color: #1e1e1e;
+  padding: 60px;
+  color: #fff;
+}
