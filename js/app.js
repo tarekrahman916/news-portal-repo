@@ -26,7 +26,9 @@ const displayCategories = (categories) => {
 
 //Load all News
 const loadNews = async (category_id, categoryName) => {
-  //toggleSpinner(true); //spinner starts
+
+  toggleSpinner(true); //spinner starts
+
   const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
   try {
     const res = await fetch(url);
@@ -108,9 +110,8 @@ const displayNews = (allNews, categoryName) => {
               </div>
             </div>
             <div class="col-lg-3 col-6 text-center d-flex ">
-            <i class="fa-solid fa-eye me-1"></i><h6>${
-              news.total_view ? news.total_view : "No Data available"
-            }M</h6>
+               <i class="fa-regular fa-eye me-2"></i>
+               <h6>${news.total_view ? news.total_view+'M' : "No Data available"}</h6>
             </div>
             <div class="col-lg-3 col-6">
               <i class="fa-solid fa-star"></i>
@@ -134,7 +135,17 @@ const displayNews = (allNews, categoryName) => {
         `;
     allNewsContainer.appendChild(newsDiv);
   });
-  //toggleSpinner(false); //spinner stop 
+  toggleSpinner(false); //spinner stop 
+};
+
+//toggle spinner
+const toggleSpinner = (isLoading) => {
+  const loaderSection = document.getElementById("loader");
+  if (isLoading) {
+    loaderSection.classList.remove("d-none");
+  } else {
+    loaderSection.classList.add("d-none");
+  }
 };
 
 loadCategories();
